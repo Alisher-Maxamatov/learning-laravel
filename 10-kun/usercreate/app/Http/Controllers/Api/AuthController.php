@@ -15,7 +15,7 @@ class AuthController extends Controller
             $request->validate([
                 'name' => 'required|string|max:255',
                 'email' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:8|confirmed',
+                'password' => 'required|string|min:8',
             ]);
 
             $user = User::create([
@@ -76,9 +76,12 @@ class AuthController extends Controller
             ], 500);
         }
     }
-
     public function logout(Request $request)
     {
+        if (!$request->user()) {
+            return response()->json(['message' => 'Unauthorized'], 401);
+        }
+
         try {
             $request->user()->currentAccessToken()->delete();
             return response()->json(['message' => 'Logged out successfully']);
