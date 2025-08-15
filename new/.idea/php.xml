@@ -167,6 +167,7 @@
       <path value="$PROJECT_DIR$/laravel-roles-api/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/laravel-roles-api/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/laravel-roles-api/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/laravel-roles-api/vendor/laravel/breeze" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.4" />

@@ -7,10 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 
     use HasFactory;
     protected $fillable = [
@@ -19,4 +15,8 @@ class Task extends Model
       'task_content',
         'status',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -13,11 +13,6 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
     use HasFactory, Notifiable;
 
-    public function task()
-    {
-        return $this->hasMany(Task::class);
-    }
-
     /** @use HasFactory<\Database\Factories\UserFactory>
     ** @var list<string> */
     protected $fillable = [
@@ -48,5 +43,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
     }
 }

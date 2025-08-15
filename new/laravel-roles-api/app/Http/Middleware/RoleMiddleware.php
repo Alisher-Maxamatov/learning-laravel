@@ -11,16 +11,22 @@ class RoleMiddleware
 {
     /**@param \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response) $next
      */
-    public function handle(Request $request, Closure $next, Role $roles)
+    public function handle(Request $request, Closure $next, ...$roles)
     {
         $user = $request->user();
         if (!$user) {
-            return response()->json(['message' => 'Unauthorized'], 401);
+            if ($request->expectsJson()) {
+                return response()->json(['message' => 'Unauthorized'], 401);
+            }
+            return redirect('/login');
         }
 
-            if (!in_array($user->role, $roles)){
-            return response()->json(['message' => "Access denied"], 403);
-        };
+        if (!in_array($user->role, $roles)) {
+            if ($request->expectsJson()) {
+                return response()->json(['message' => "Access denied"], 403);
+            };
+            return abort(403, "Sizda bu amalni qilishga ruxsat yo'q");
+                }
         return $next($request);
     }
 }

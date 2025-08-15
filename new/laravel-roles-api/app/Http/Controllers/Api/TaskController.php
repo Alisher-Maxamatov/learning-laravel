@@ -53,7 +53,11 @@ class TaskController extends Controller
         if ($user->role() === 'user' &&  $task->user_id !== $user->id) {
             return response()->json(["message', 'Bu vazifani ko'rishga ruxsat yo'q"]);
             }
-
+        if ($user->role() === 'admin' || $user->role() === 'moderator'){
+            return response()->json([
+                'data' => $task
+            ]);
+        }
     }
 
     /**
