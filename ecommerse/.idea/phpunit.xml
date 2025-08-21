@@ -3,8 +3,22 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
+        <option value="$PROJECT_DIR$/shopping/new/laravel-roles-api/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/new/laravel-roles-api/tests/Feature" />
+        <option value="$PROJECT_DIR$/shopping/9-kun/crudapi-app/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/9-kun/crudapi-app/tests/Feature" />
+        <option value="$PROJECT_DIR$/shopping/7-kun/api-1/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/7-kun/api-1/tests/Feature" />
         <option value="$PROJECT_DIR$/shopping/tests/Unit" />
         <option value="$PROJECT_DIR$/shopping/tests/Feature" />
+        <option value="$PROJECT_DIR$/shopping/2-kun/crud/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/2-kun/crud/tests/Feature" />
+        <option value="$PROJECT_DIR$/shopping/2-kun/controut/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/2-kun/controut/tests/Feature" />
+        <option value="$PROJECT_DIR$/shopping/6-kun/like-operators/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/6-kun/like-operators/tests/Feature" />
+        <option value="$PROJECT_DIR$/shopping/10-kun/usercreate/tests/Unit" />
+        <option value="$PROJECT_DIR$/shopping/10-kun/usercreate/tests/Feature" />
       </list>
     </option>
   </component>
